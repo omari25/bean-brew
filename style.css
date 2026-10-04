@@ -1,0 +1,559 @@
+/* =====================================
+   BASIC RESET
+   ===================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+
+    font-family: Arial, sans-serif;
+
+    background-color: #f5f1eb;
+
+    color: #2d241f;
+}
+
+
+/* =====================================
+   HEADER
+   ===================================== */
+
+.header {
+    padding: 50px 20px;
+
+    text-align: center;
+
+    background-color: #3b2921;
+
+    color: white;
+}
+
+.logo {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.header p {
+    margin-bottom: 0;
+
+    color: #ddd;
+}
+
+
+/* =====================================
+   NAVIGATION
+   ===================================== */
+
+.navbar {
+
+    /*
+        Try changing this to:
+
+        position: static;
+        position: relative;
+        position: fixed;
+        position: sticky;
+    */
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 100;
+
+    padding: 18px;
+
+    text-align: center;
+
+    background-color: #ffffff;
+
+    border-bottom: 1px solid #ddd;
+}
+
+.navbar a {
+
+    margin: 0 20px;
+
+    color: #3b2921;
+
+    text-decoration: none;
+
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+
+/* =====================================
+   FIXED DISCOUNT
+   ===================================== */
+
+.discount {
+
+    position: fixed;
+
+    right: 20px;
+    bottom: 20px;
+
+    z-index: 200;
+
+    padding: 15px 20px;
+
+    background-color: #c87538;
+
+    color: white;
+
+    border-radius: 30px;
+
+    font-weight: bold;
+
+    /*
+        Try:
+
+        top: 20px;
+        left: 20px;
+
+        instead of right/bottom.
+    */
+}
+
+
+/* =====================================
+   HERO
+   ===================================== */
+
+.hero {
+
+    position: relative;
+
+    min-height: 500px;
+
+    padding: 100px 10%;
+
+    background-color: #d8b18b;
+
+    overflow: hidden;
+}
+
+.hero-content {
+    max-width: 550px;
+}
+
+.small-title {
+    font-size: 14px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+}
+
+.hero h1 {
+    margin: 20px 0;
+
+    font-size: 60px;
+
+    line-height: 1.05;
+}
+
+.hero p {
+    font-size: 18px;
+
+    line-height: 1.6;
+}
+
+button {
+    padding: 14px 25px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    background-color: #3b2921;
+
+    color: white;
+
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #241913;
+}
+
+
+/* =====================================
+   ABSOLUTE BADGE
+   ===================================== */
+
+.coffee-badge {
+
+    /*
+        This element is positioned
+        relative to .hero because
+        .hero has position: relative.
+    */
+
+    position: absolute;
+
+    right: 12%;
+    bottom: 50px;
+
+    width: 130px;
+    height: 130px;
+
+    padding-top: 20px;
+
+    text-align: center;
+
+    border-radius: 50%;
+
+    background-color: #fff;
+
+    font-size: 40px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+
+    /*
+        Try changing:
+
+        right: 20px;
+        bottom: 100px;
+
+        top: 50px;
+        left: 50px;
+    */
+}
+
+.coffee-badge span {
+    display: block;
+
+    font-size: 14px;
+
+    font-weight: bold;
+}
+
+
+/* =====================================
+   MAIN CONTAINER
+   ===================================== */
+
+.container {
+    width: 90%;
+
+    max-width: 1100px;
+
+    margin: auto;
+}
+
+
+/* =====================================
+   SECTION HEADING
+   ===================================== */
+
+.section-heading {
+    padding: 80px 0 30px;
+
+    text-align: center;
+}
+
+.section-heading p {
+    font-size: 13px;
+
+    letter-spacing: 3px;
+
+    font-weight: bold;
+}
+
+.section-heading h2 {
+    font-size: 40px;
+}
+
+
+/* =====================================
+   CARDS
+   ===================================== */
+
+.cards {
+
+    display: flex;
+
+    gap: 25px;
+
+    flex-wrap: wrap;
+}
+
+.card {
+
+    /*
+        Important!
+
+        We use position: relative
+        so that the .popular element
+        can be positioned relative
+        to this card.
+    */
+
+    position: relative;
+
+    flex: 1;
+
+    min-width: 250px;
+
+    background-color: white;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =====================================
+   CARD IMAGE
+   ===================================== */
+
+.card-image {
+
+    height: 180px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 70px;
+}
+
+.coffee {
+    background-color: #c69c75;
+}
+
+.latte {
+    background-color: #e4c9a8;
+}
+
+.mocha {
+    background-color: #9b7155;
+}
+
+
+/* =====================================
+   CARD CONTENT
+   ===================================== */
+
+.card-content {
+    padding: 25px;
+}
+
+.card-content h3 {
+    font-size: 24px;
+}
+
+.card-content p {
+    line-height: 1.6;
+
+    color: #666;
+}
+
+.card-content strong {
+    font-size: 20px;
+}
+
+
+/* =====================================
+   ABSOLUTE POPULAR LABEL
+   ===================================== */
+
+.popular {
+
+    position: absolute;
+
+    top: 15px;
+    right: 15px;
+
+    padding: 8px 12px;
+
+    background-color: #3b2921;
+
+    color: white;
+
+    border-radius: 20px;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    /*
+        Try changing:
+
+        top: 50px;
+        left: 20px;
+        right: auto;
+
+        z-index: 5;
+    */
+}
+
+
+/* =====================================
+   POSITION PRACTICE AREA
+   ===================================== */
+
+.workspace {
+
+    margin-top: 100px;
+
+    padding: 60px;
+
+    background-color: #3b2921;
+
+    color: white;
+
+    border-radius: 15px;
+}
+
+.workspace > h2 {
+    font-size: 35px;
+}
+
+
+/* =====================================
+   SPECIAL CARD
+   ===================================== */
+
+.special-card {
+
+    /*
+        Change this to:
+
+        position: static;
+
+        and see what happens to
+        the elements inside it.
+    */
+
+    position: relative;
+
+    min-height: 250px;
+
+    margin-top: 30px;
+
+    padding: 40px;
+
+    background-color: #d8b18b;
+
+    color: #2d241f;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+.special-text {
+    max-width: 500px;
+}
+
+.special-text h3 {
+    font-size: 30px;
+}
+
+
+/* =====================================
+   ABSOLUTE COFFEE CUP
+   ===================================== */
+
+.coffee-cup {
+
+    position: absolute;
+
+    right: 80px;
+    bottom: 20px;
+
+    font-size: 120px;
+
+    /*
+        Try:
+
+        right: 0;
+        bottom: 0;
+
+        top: 20px;
+        left: 20px;
+    */
+}
+
+
+/* =====================================
+   ABSOLUTE LIMITED LABEL
+   ===================================== */
+
+.limited {
+
+    position: absolute;
+
+    top: 20px;
+    right: 20px;
+
+    padding: 10px 15px;
+
+    background-color: #c87538;
+
+    color: white;
+
+    border-radius: 5px;
+
+    font-weight: bold;
+}
+
+
+/* =====================================
+   STORY SECTION
+   ===================================== */
+
+.story {
+
+    min-height: 700px;
+
+    padding: 100px 20px;
+
+    text-align: center;
+}
+
+.story h2 {
+    font-size: 40px;
+}
+
+.story p {
+
+    max-width: 650px;
+
+    margin: 30px auto;
+
+    line-height: 1.8;
+
+    color: #666;
+
+    font-size: 18px;
+}
+
+
+/* =====================================
+   FOOTER
+   ===================================== */
+
+footer {
+
+    padding: 60px;
+
+    text-align: center;
+
+    background-color: #241913;
+
+    color: white;
+}
